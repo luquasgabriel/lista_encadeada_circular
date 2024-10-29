@@ -1,0 +1,39 @@
+Grupo: Edgar de Oliveira Pereira, José Gouveia da Silva Neto e Lucas Gabriel Pereira da Silva
+
+Material utilizado:
+https://awari.com.br/lista-encadeada-em-python-aprenda-a-estrutura-de-dados-essencial-para-programacao/
+09-listas-encadeadas.pdf
+
+-> Execute menu.py para testar as funções da classe ListaEncadeadaCircular e para rodar os testes disponibilizados diretamente pelo terminal.
+
+-> O arquivo lista_encadeada_circular.py contém todas as funções solicitadas e passa pelas execuções realizadas pelo menu.
+
+-> No arquivo membro.py, há a classe separada para melhor organização.
+
+
+A respeito das Classes e Métodos:
+*Classe Membro
+A classe Membro representa cada membro do grupo de estudo e contém informações básicas como nome (e-mail, se necessário). Ela possui o atributo proximo que aponta para o próximo membro na lista encadeada
+
+*Classe ListaEncadeadaCircular
+A classe ListaEncadeadaCircular implementa uma lista encadeada circular, onde os membros podem ser adicionados e removidos, e um membro pode ser selecionado como o próximo responsável.
+
+*Método __init__: É o construtor da classe e é chamado quando criamos uma nova instância de ListaEncadeadaCircular. Ele inicializa a lista, definindo head como None e atual como None.
+
+*Método adicionar_membro(membro): Este método adiciona um novo membro ao final da lista. Se a lista estiver vazia, o membro se torna o head e aponta para si mesmo. Se já houver membros, ele encontra o último membro e o conecta ao novo membro, formando um ciclo.
+
+*Método remover_membro(nome): Este método remove um membro pelo seu nome. Ele verifica se a lista está vazia, e se o membro a ser removido é o head. Se for, ele atualiza o head e ajusta os ponteiros para manter a circularidade. Se o membro não for encontrado, uma mensagem é exibida.
+
+*Método proximo_responsavel(): Este método exibe o próximo responsável pela reunião. Ele imprime o nome do membro atual e avança para o próximo membro na lista. Caso a lista esteja vazia, uma mensagem de aviso é exibida.
+
+*Método mostrar_lista(): Esse método exibe todos os membros presentes na lista. Ele percorre a lista, coletando os nomes dos membros e os imprime em um formato legível.
+
+
+Quanto ao desempenho:
+*adicionar_membro(membro): O tempo de execução é O(n) no pior caso, onde n é o número de membros, pois pode ser necessário percorrer toda a lista para encontrar o último membro.
+
+*remover_membro(nome): A complexidade também é O(n), pois é necessário percorrer a lista para encontrar o membro a ser removido.
+
+*proximo_responsavel(): Este método opera em O(1), pois simplesmente avança para o próximo membro, sem a necessidade de percorrer a lista.
+
+*mostrar_lista(): A complexidade é O(n), já que o método precisa percorrer toda a lista para coletar os nomes dos membros.
